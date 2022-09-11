@@ -32,6 +32,8 @@ Miner or Maximal extractable value known as MEV usually refers to the extra valu
  
  ## MEV games formalization and taxonomy.
  
+ ![MEV games taxonomy](https://i.imgur.com/VSMlS98.png)
+ 
  ## Nash equilibrium and Price of MEV.
  
 - **Theorem 1**: Proof of Work+ Public mempool $\Rightarrow$ Nash equilibrium were all the profits are shared by the searchers. Moreover, this equilibrium can be twisted to be sybil resistant.
