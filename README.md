@@ -56,6 +56,13 @@ Flashbots relayer can simulate bundles in order to construct the most proftible 
  
 The strategy creates visible arbitrage opportunities in the mempool to incentivise MEV bots to spam arbitrage transactions. Manipulation of account nonces and the properties of bor client transaction propagation is used to prevent MEV bots from actually extracting the arbitrage opportunity, rather the trade reverses at no cost to the strategy user except for gas fees. This allows an adversary to create a large number of on-chain spam transactions for minimal cost. In other words, the strategy bribes MEV bots to fill Polygon PoS blocks with spam transactions, without actually paying the bribe. More details in the report and [Hamelin github](https://github.com/GrimmBrothers/Hamelin/blob/main/README.md).
  
+ 
+ # Code
+ 
+ - Computation of Price of MEV.
+ - Fake-bidding strategy
+ - Hamelin strategy
+ 
  # Conclusions
  
  # Acknowledgements
@@ -66,7 +73,7 @@ The strategy creates visible arbitrage opportunities in the mempool to incentivi
 
  # References
  
--[Flash Boys 2.0: Frontrunning, Transaction Reordering, and Consensus Instability in Decentralized Exchanges](https://arxiv.org/abs/1904.05234), 2019 [[Video]](https://www.youtube.com/watch?v=vR1v7AQ8i3k)
+- [Flash Boys 2.0: Frontrunning, Transaction Reordering, and Consensus Instability in Decentralized Exchanges](https://arxiv.org/abs/1904.05234), 2019 [[Video]](https://www.youtube.com/watch?v=vR1v7AQ8i3k)
 - [Maximizing Extractable Value from Automated Market Makers](https://arxiv.org/pdf/2106.01870.pdf), 2021
 - [Price of MEV: Towards a Game Theoretical Approach to MEV](https://arxiv.org/abs/2208.13464), 2022
 - [MEV-Boost: Merge ready Flashbots Architecture](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177), 2021
