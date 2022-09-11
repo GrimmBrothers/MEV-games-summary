@@ -25,9 +25,9 @@ Miner or Maximal extractable value known as MEV usually refers to the extra valu
  - **Local MEV**
  - **Permisionless MEV**:
  - **Price of MEV**:
+ - **Auction Mechanism**:
  - **Ordering Mechanism**:
  - **MEV game**
- - **Auction Mechanism**:
  - **Zero-sum searcher games**:
  
  # Main contributions.
@@ -36,10 +36,10 @@ Miner or Maximal extractable value known as MEV usually refers to the extra valu
  
  ## Nash equilibrium and Price of MEV.
  
- **Theorem 1**: Proof of Work+ Public mempool $\Rightarrow$ Nash equilibrium were all the profits are shared by the searchers. Moreover, this equilibrium can be twisted to be sybil resistant.
- **Thereom 2**: Private mempool (players do not see each others bid) and enough symmetry among searchers (players share the same gas costs) $\Rightarrow$ unique Nash equilibrium, everything is payed to the miner. If reverted transactions are executed, the price of MEV is $\Omega(n)$. Otherwise, (Flashbots auction), the price of MEV $\Omega(1)$.
- **Theorem 3**: Low latency chains (no time to react to other players bids)+ random ordering (e.g. Polygon) $\Rightarrow$ Not all profits are payed to the validator and the price of MEV is $\Omega(\sqrt{ev})$.
- **Theorem 4**: Meta-data ordering rules and latency games $\Rightarrow$ High centralization, payment goes to other parties (AWS, energy companies) and the price of MEV is $\Omega(n)$.
+- **Theorem 1**: Proof of Work+ Public mempool $\Rightarrow$ Nash equilibrium were all the profits are shared by the searchers. Moreover, this equilibrium can be twisted to be sybil resistant.
+- **Thereom 2**: Private mempool (players do not see each others bid) and enough symmetry among searchers (players share the same gas costs) $\Rightarrow$ unique Nash equilibrium, everything is payed to the miner. If reverted transactions are executed, the price of MEV is $\Omega(n)$. Otherwise, (Flashbots auction), the price of MEV $\Omega(1)$.
+- **Theorem 3**: Low latency chains (no time to react to other players bids)+ random ordering (e.g. Polygon) $\Rightarrow$ Not all profits are payed to the validator and the price of MEV is $\Omega(\sqrt{ev})$.
+- **Theorem 4**: Meta-data ordering rules and latency games $\Rightarrow$ High centralization, payment goes to other parties (AWS, energy companies) and the price of MEV is $\Omega(n)$.
  
  
  ## MEV-boost and public Bids.
