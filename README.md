@@ -47,6 +47,7 @@ We model the MEV game as a sequential game among a set of $n$ searchers $P_1,...
 - **Theorem 3**: Low latency chains (no time to react to other players bids)+ random ordering (e.g. Polygon) $\Rightarrow$ Not all profits are payed to the validator and the price of MEV is $\Omega(\sqrt{ev})$.
 - **Theorem 4**: Meta-data ordering rules and latency games $\Rightarrow$ High centralization, payment goes to other parties (AWS, energy companies) and the price of MEV is $\Omega(n)$.
  
+ ![](https://i.imgur.com/LfWrPCm.png)
  
  ## MEV-boost and public Bids.
  
