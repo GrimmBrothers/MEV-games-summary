@@ -21,14 +21,13 @@ Miner or Maximal extractable value known as MEV usually refers to the extra valu
   
  # Relevant terms.
  
- - **MEV**:
- - **Local MEV**
- - **Permisionless MEV**:
- - **Price of MEV**:
- - **Ordering Mechanism**:
- - **MEV game**
- - **Auction Mechanism**:
- - **Zero-sum searcher games**:
+   - **Local MEV**: Refers to the extra value that a players can extract through strategically order, censor and place transactions in a domain. This is defined through a optimization problem, where the constraints are given by the player software and mempool pool limitations.
+ - **Permisionless MEV**: Is the minimum local MEV that can be extracted by a set of players with an specific set of constraints.
+ - **Price of MEV**: Is the Price of Anarchy of the games played by searchers in an specific game. That is, is the ratio of the Cost induced by the worst Nash equilibrium and the most optimal MEV extraction. The cost functions is not determined and can measure the cost of centralization, the block-space misusage, etc.
+ - **Ordering Mechanism**: Is the algorithm used by domains clients (e.g. geth, bor, bsc-geth, Flashbots builder, etc) to order transactions and construct a block.
+  - **Auction Mechanism**: Is the algorithm that determinates the alloaction of the MEV opportunity and the payments induced to the searchers.
+ - **MEV game**: Is the Game played among players in an specific domain. The game is determinated by the gossip-network (modeled by a weighted directed graph), the block production random variable (models the time of block production), the gross value $v$ of the MEV opportunity and the auction mechanism induced by the ordering mechanism and the players extraction efficiencies.
+ - **Zero-sum searcher games**: Are the set of games played among searchers to extract value from each other (e.g. salmonella, posion tokens, etc)
  
  # Main contributions.
  
