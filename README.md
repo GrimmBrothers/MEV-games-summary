@@ -42,12 +42,31 @@ Miner or Maximal extractable value known as MEV usually refers to the extra valu
  
  ## MEV-boost and public Bids.
  
- ## Zero sum searcher games.
+ We formalize the MEV-boost as an MEV game between builders. We prove that public bids are incompatible with the MEV-boost decentralziation goals.
+ With the theorems about MEV games and Price of MEV, we deduce that builders do not have incentives to include reverted transactions. We suspect that running Combinatorial auction is a dominant strategy (however, this also depends on users actions).
+ 
+ ## Zero sum searcher strategies.
+ 
+ We introduce the Zero-sum searcher strategies. Strategies that consist of stealing, exploit, slow down or push an specific behaviour of other bots/builders. A popular examples of this strategy is [Salmonella](https://github.com/Defi-Cartel/salmonella).
  
  ### Fake bidding strategy.
+Flashbots relayer can simulate bundles in order to construct the most proftible bundles. However, there is a there is a potential difference between the simulation and the execution payoff. Since Flashbots can not predict the special variables of next block, it can not ensure the exactly payoff of each bundle, and so, the payoff of the block. Fake bidding is the strategy used by adversarial searchers to fake bids in order to outbid competidors in the FB block simulation. This, would in expectancy increase their revenue. This strategy can be used after boosting their address reputation to increse its impact. Moreover,fake bidding strategy can be generalized with multiple accounts, to ensure wining the bundle and minimizing the payment with high probability. More details in the report and [Fake bidding github](https://github.com/GrimmBrothers/flashbots-fake-bidding).
+
+ ### Hamelin
  
+The strategy creates visible arbitrage opportunities in the mempool to incentivise MEV bots to spam arbitrage transactions. Manipulation of account nonces and the properties of bor client transaction propagation is used to prevent MEV bots from actually extracting the arbitrage opportunity, rather the trade reverses at no cost to the strategy user except for gas fees. This allows an adversary to create a large number of on-chain spam transactions for minimal cost. In other words, the strategy bribes MEV bots to fill Polygon PoS blocks with spam transactions, without actually paying the bribe. More details in the report and [Hamelin github](https://github.com/GrimmBrothers/Hamelin/blob/main/README.md).
  
  # Conclusions
  
  # Acknowledgements
  
+ - [Flashbots](https://www.flashbots.net/).
+ - [wintermute](https://www.wintermute.com/)
+ - @barnabemonnot and @nikete
+
+ # References
+ 
+-[Flash Boys 2.0: Frontrunning, Transaction Reordering, and Consensus Instability in Decentralized Exchanges](https://arxiv.org/abs/1904.05234), 2019 [[Video]](https://www.youtube.com/watch?v=vR1v7AQ8i3k)
+- [Maximizing Extractable Value from Automated Market Makers](https://arxiv.org/pdf/2106.01870.pdf), 2021
+- [Price of MEV: Towards a Game Theoretical Approach to MEV](https://arxiv.org/abs/2208.13464), 2022
+- [MEV-Boost: Merge ready Flashbots Architecture](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177), 2021
