@@ -66,6 +66,7 @@ Flashbots relayer can simulate bundles in order to construct the most proftible 
 The strategy creates visible arbitrage opportunities in the mempool to incentivise MEV bots to spam arbitrage transactions. Manipulation of account nonces and the properties of bor client transaction propagation is used to prevent MEV bots from actually extracting the arbitrage opportunity, rather the trade reverses at no cost to the strategy user except for gas fees. This allows an adversary to create a large number of on-chain spam transactions for minimal cost. In other words, the strategy bribes MEV bots to fill Polygon PoS blocks with spam transactions, without actually paying the bribe. More details in the report and [Hamelin github](https://github.com/GrimmBrothers/Hamelin/blob/main/README.md).
  
  ### Hansel and Gretel
+ The Hansel and Gretel strategy, similar to salmonella, tricks searchers to buy a token created by the executioner of the strategy to remove the funds, leving to profits. More details in the report.
  
  # Code
  
