@@ -32,8 +32,14 @@ Miner or Maximal extractable value known as MEV usually refers to the extra valu
  
  ## MEV games formalization and taxonomy.
  
+We model the MEV game as a sequential game among a set of $n$ searchers $P_1,...,P_n$ who can send bundles to obtain an MEV opportunity. We assume that all players compete for the same MEV opportunity and have sufficient capital to extract it. When a specific player wins the MEV opportunity, it reaches a null MEV state for all players. In the paper, we provide a list of points that will define the MEV game. This game will take into account the latency of the players, the duration of the blocks, the mechanism of transaction inclusion (ordering mechanism), the costs of improving software, node location, etc.
+ 
  ![MEV games taxonomy](https://i.imgur.com/VSMlS98.png)
  
+ - **PGA** = Priority gas auction
+ - **R.O** = Random ordering
+ - **FSS** = Fair sequencing service (FIFO)
+
  ## Nash equilibrium and Price of MEV.
  
 - **Theorem 1**: Proof of Work+ Public mempool $\Rightarrow$ Nash equilibrium were all the profits are shared by the searchers. Moreover, this equilibrium can be twisted to be sybil resistant.
